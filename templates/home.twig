@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+   {% include 'includes/head.twig'%}
+  </head>
+  <body>
+    {% include 'includes/navigation.twig'%}
+    <div class="container-fluid">
+      
+      <div class="row">
+        <div class="col-md-2">
+          {#for categories#}
+          {% include 'includes/categories.twig' %}
+        </div>
+        <div class="col-md-10">
+          {#for product#}
+          <div class="row">
+                {% for product in products %}
+        <div class="col-md-3">
+          <h3>{{product.name}}</h3>
+          <img class="img-fluid" 
+          src="images/products/products/{{product.image_file_name}}">
+          <h4>{{product.price}}</h4>
+          <a href="detail.php?id={{product.product_id}}">Detail</a>
+        </div>
+        
+        {% endfor %}
+   
+          </div>
+        </div>
+    
+        
+      </div>
+      
+    </div>
+    
+    
+  </body>
+  
+</html>

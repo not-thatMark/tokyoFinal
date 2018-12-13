@@ -1,0 +1,8 @@
+<nav class="nav flex-column nav-pills">
+    {%for category in categories%}
+    <a class="nav-link" href="index.php?category={{category.category_id}}">{{category.category_name}}</a>
+    
+    {%endfor%}
+    
+    
+</nav>
