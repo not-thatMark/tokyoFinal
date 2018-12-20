@@ -11,7 +11,7 @@ $page_title = 'Shop Page';
 use aitsyd\Categories;
 $category_class=new Categories();
 $categories=$category_class->getCategories();
-
+$active_category=$category_class->getActive();
 $loader = new Twig_Loader_Filesystem('templates');
 $twig = new Twig_Environment($loader, array(
   //'cache' => 'cache'
@@ -22,7 +22,8 @@ echo $template -> render( array(
       'products' => $products, 
       'pagetitle' => $page_title,
       'currentPage' => $currentPage,
-      'categories'=>$categories
+      'categories'=>$categories,
+      'activeCategory'=>$active_category
       )
     );
 ?>
