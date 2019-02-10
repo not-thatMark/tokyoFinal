@@ -11,15 +11,16 @@
                         <div
                             class="collapse navbar-collapse" id="navcol-1">
                             <ul class="nav navbar-nav mx-auto" style="color:rgb(255,255,255);margin:12 20px;">
-                                <li class="nav-item" role="presentation"><a class="nav-link active" href="Food.html" id="navbar-item1" style="/*color:rgba(0,0,0,0.9);*/">First Item</a></li>
-                                <li class="nav-item" role="presentation"><a class="nav-link active" href="Food.html" id="navbar-item2" style="/*color:rgba(0,0,0,0.9);*/">First Item</a></li>
-                                <li class="nav-item" role="presentation"><a class="nav-link" href="Food.html" id="navbar-item3" style="/*color:white;*/">Second Item</a></li>
-                                <li class="nav-item" role="presentation" style="color:rgb(255,255,255);"><a class="nav-link" href="Food.html" id="navbar-item4" style="/*color:rgba(0,0,0,0.5);*/">Third Item</a></li>
+                                {% for name, link in pages %}
+                                <a class="nav-link text-capitalize {{(link == currentPage) ? 'active' : '' }}" href="{{link}}">{{name}}</a>
+                                   
+                                <li class="nav-item" role="presentation"><a class="nav-link active" {{(link == currentPage) ? 'active' : '' }}href="{{link}}" id="navbar-item1" style="/*color:rgba(0,0,0,0.9);*/">{{name}}</a></li>
+                               
                             </ul>
                             <ul class="nav navbar-nav" style="color:rgb(255,255,255);">
-                                <li class="nav-item" role="presentation"><a class="nav-link active" href="login.html" id="navbar-item5" style="/*color:rgba(0,0,0,0.9);*/">Log in</a></li>
-                                <li class="nav-item" role="presentation"><a class="nav-link active" href="signup.html" id="navbar-item6" style="/*color:rgba(0,0,0,0.9);*/">Sign up</a></li>
+                                   <li class="nav-item" role="presentation"><a class="nav-link active" {{(link == currentPage) ? 'active' : '' }}href="{{link}}" id="navbar-item1" style="/*color:rgba(0,0,0,0.9);*/">{{name}}</a></li>
                             </ul>
+                               {% endfor %}
                 </div>
     </div>
     </nav>

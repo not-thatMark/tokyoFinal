@@ -3,7 +3,7 @@
 //functions
 function setQuantity( quantity ){
   if( quantity > 0 ){
-    $('input[name="quantity"]').val( quantity );
+    $('input[name="ticketCapacity"]').val( quantity );
   }
 }
 

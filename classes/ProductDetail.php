@@ -6,7 +6,7 @@ class ProductDetail extends Product{
   public $product = array();
   public function __construct(){
     parent::__construct();
-    $this -> product_id = $_GET['id'];
+    $this -> product_id = $_GET['photoID'];
   }
   public function getProductById(){
     if( isset($this -> product_id) == false ){
@@ -39,10 +39,10 @@ class ProductDetail extends Product{
         //add images to an array
         $img_array = array();
         foreach( $tmp_array as $product ){
-          array_push( $img_array, $product['image_file_name'] );
+          array_push( $img_array, $product['photoName'] );
         }
         //add the images array to the product array as 'images'
-        $this -> product['images'] = $img_array;
+        $this -> product['photo'] = $img_array;
         
         return $this -> product;
       }
