@@ -1,9 +1,0 @@
-<nav class="nav flex-column nav-pills">
-    {%for category in categories%}
-    {%set active=(category.category_id==activeCategory)?'active':''%}
-    <a class="nav-link {{active}}" href="index.php?category={{category.category_id}}">{{category.category_name}}</a>
-    
-    {%endfor%}
-    
-    
-</nav>

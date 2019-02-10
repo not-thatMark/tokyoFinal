@@ -8,9 +8,9 @@ class Navigation{
     $this -> generateMainNavigation();
   }
   private function checkAuth(){
-    if( isset( $_SESSION['email'] ) || isset( $_SESSION['account_id'] ) ){
+    if( isset( $_SESSION['email'] ) || isset( $_SESSION['userID'] ) ){
       //if user is admin, set authStatus to 2, otherwise 1
-      $this -> authStatus = ( isset($_SESSION['admin_id']) ) ? 2 : 1;
+      $this -> authStatus = ( isset($_SESSION['userID']) ) ? 2 : 1;
     }
     else{
       $this -> authStatus == 0;
@@ -21,6 +21,10 @@ class Navigation{
       case 0:
         $this -> pages = array(
           'home' => 'index.php',
+          'Food'=>'food.php',
+          'Cosplay'=>'cosplay.php',
+          'Music'=>'music.php',
+          'Nature' =>'nature.php',
           'sign in' => 'signin.php',
           'sign up' => 'signup.php'
         );
@@ -28,14 +32,22 @@ class Navigation{
       case 1:
         $this -> pages = array(
           'home' => 'index.php',
-          'account' => 'account.php',
+          'Food'=>'food.php',
+          'Cosplay'=>'cosplay.php',
+          'Music'=>'music.php',
+          'Nature' =>'nature.php',
+          'account' => 'useraccount.php',
           'sign out' => 'signout.php'
         );
         break;
       case 2:
         $this -> pages = array(
           'home' => 'index.php',
-          'account' => 'account.php',
+          'Food'=>'food.php',
+          'Cosplay'=>'cosplay.php',
+          'Music'=>'music.php',
+          'Nature' =>'nature.php',
+          'account' => 'useraccount.php',
           'admin' => 'admin.php',
           'sign out' => 'signout.php'
         );

@@ -1,35 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+<section id="nav-and-carou" style="padding:10px;width:100%;">
+            <nav class="navbar navbar-light navbar-expand-md" style="color:rgb(255,255,255);">
+                <div class="container-fluid"><a class="navbar-brand" href="Index.html" style="color:rgba(255,255,255,0.9);background-image:url(&quot;assets/img/Untitled-1.png&quot;);background-position:center;background-size:contain;background-repeat:no-repeat;width:180px;height:40px;background-color:rgba(255,255,255,0);"></a>
+                    <button
+                        class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1" style="color:#ffffff;background-color:#ffffff;"><span class="sr-only" style="background-color:rgba(255,255,255,0);color:rgba(255,255,255,0);">Toggle navigation</span><span class="navbar-toggler-icon" style="background-color:rgba(255,255,255,0);color:rgba(16,3,3,0);"></span></button>
+                       <div class="user-nav d-flex flex-row mx-2 order-4">
+    {% if user %}
+      Hello {{user.username}}
+    {% endif %}
+  </div>  
+                        <div
+                            class="collapse navbar-collapse" id="navcol-1">
+                            <ul class="nav navbar-nav mx-auto" style="color:rgb(255,255,255);margin:12 20px;">
+                                <li class="nav-item" role="presentation"><a class="nav-link active" href="Food.html" id="navbar-item1" style="/*color:rgba(0,0,0,0.9);*/">First Item</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link active" href="Food.html" id="navbar-item2" style="/*color:rgba(0,0,0,0.9);*/">First Item</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="Food.html" id="navbar-item3" style="/*color:white;*/">Second Item</a></li>
+                                <li class="nav-item" role="presentation" style="color:rgb(255,255,255);"><a class="nav-link" href="Food.html" id="navbar-item4" style="/*color:rgba(0,0,0,0.5);*/">Third Item</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav" style="color:rgb(255,255,255);">
+                                <li class="nav-item" role="presentation"><a class="nav-link active" href="login.html" id="navbar-item5" style="/*color:rgba(0,0,0,0.9);*/">Log in</a></li>
+                                <li class="nav-item" role="presentation"><a class="nav-link active" href="signup.html" id="navbar-item6" style="/*color:rgba(0,0,0,0.9);*/">Sign up</a></li>
+                            </ul>
+                </div>
+    </div>
+    </nav>
+    </section>
