@@ -7,8 +7,7 @@ class Categories extends Database{
   }
   public function getCategories(){
     $query = "SELECT tagID,tagName
-    FROM category
-    WHERE active = 1";
+    FROM tag";
     $statement = $this -> connection -> prepare( $query );
     $statement -> execute();
     $result = $statement -> get_result();

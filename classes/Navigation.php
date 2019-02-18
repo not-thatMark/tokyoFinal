@@ -19,37 +19,38 @@ class Navigation{
   protected function generateMainNavigation(){
     switch( $this -> authStatus ){
       case 0:
-        $this -> pages = array(
-          'home' => 'index.php',
+        $this -> pages['pages'] = array(
           'Food'=>'food.php',
-          'Cosplay'=>'cosplay.php',
-          'Music'=>'music.php',
-          'Nature' =>'nature.php',
-          'sign in' => 'signin.php',
+          'Cosplay'=>'food.php',
+          'Music'=>'food.php',
+          'Nature' =>'food.php'
+        );
+        $this -> pages['account'] = array(
+          'log in' => 'login.php',
           'sign up' => 'signup.php'
         );
         break;
       case 1:
-        $this -> pages = array(
-          'home' => 'index.php',
+        $this -> pages['pages'] = array(
           'Food'=>'food.php',
-          'Cosplay'=>'cosplay.php',
-          'Music'=>'music.php',
-          'Nature' =>'nature.php',
+          'Cosplay'=>'food.php',
+          'Music'=>'food.php',
+          'Nature' =>'food.php',
           'account' => 'useraccount.php',
-          'sign out' => 'signout.php'
+        );
+         $this -> pages['account'] = array(
+          'log out' => 'logout.php'
         );
         break;
       case 2:
         $this -> pages = array(
-          'home' => 'index.php',
           'Food'=>'food.php',
-          'Cosplay'=>'cosplay.php',
-          'Music'=>'music.php',
-          'Nature' =>'nature.php',
+          'Cosplay'=>'food.php',
+          'Music'=>'food.php',
+          'Nature' =>'food.php',
           'account' => 'useraccount.php',
           'admin' => 'admin.php',
-          'sign out' => 'signout.php'
+       
         );
         break;
       default:

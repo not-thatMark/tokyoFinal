@@ -1,7 +1,7 @@
  <!doctype html>
 <html>
   {% include 'includes/head.twig' %}
-  <body>
+  <body style="background-color:rgb(0,0,0);">
     
     {% include 'includes/navigation.twig' %}
  
@@ -9,7 +9,7 @@
         <form method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" type="email" name="username" placeholder="User Name">
+            <div class="form-group"><input class="form-control" type="userName" name="userName" placeholder="User Name">
             {% if response.errors.username %}
               <div class="feedback text-danger">
                 {% for err in response.errors.username %}
@@ -18,7 +18,7 @@
               </div>
             {% endif %}
             </div>
-            <div class="form-group"><input class="form-control" type="password" name="email" placeholder="Email">
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password">
              {% if response.errors.email %}
               <div class="feedback text-danger">
                 {% for err in response.errors.email %}
@@ -27,7 +27,7 @@
               </div>
             {% endif %}
             </div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password">
+            <div class="form-group"><input class="form-control" type="password" name="verify" placeholder="Confirm password">
               {% if response.errors.password %}
               <div class="feedback text-danger">
                 {% for err in response.errors.password %}
@@ -36,17 +36,8 @@
               </div>
             {% endif %}
             </div>
-            <div class="form-group"><input class="form-control" type="password" name="verify" placeholder="Confirm">
+            <div class="form-group"><input class="form-control" type="userName" name="verify" placeholder="Confirm">
              </div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password">
-              {% if response.errors.password %}
-              <div class="feedback text-danger">
-                {% for err in response.errors.password %}
-                  {{err}}
-                {% endfor %}
-              </div>
-            {% endif %}
-            </div>
             <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a></form>
     </div>
       </body>

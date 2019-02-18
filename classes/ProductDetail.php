@@ -8,7 +8,10 @@ class ProductDetail extends Product{
     parent::__construct();
     $this -> product_id = $_GET['photoID'];
   }
-  public function getProductById(){
+  
+  
+  public function getProductById()
+  {
     if( isset($this -> product_id) == false ){
       exit();
     }
@@ -50,5 +53,7 @@ class ProductDetail extends Product{
       
     }
   }
+  
+  
 }
 ?>

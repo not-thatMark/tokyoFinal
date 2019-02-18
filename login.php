@@ -18,7 +18,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
   if( $signin['success'] == true ){
     $_SESSION['email'] = $signin['email'];
     $_SESSION['username'] = $signin['username'];
-    $_SESSION['account_id'] = $signin['account_id'];
+    $_SESSION['userID'] = $signin['userID'];
     //redirect user to home page
     header("location:/");
   }
@@ -32,7 +32,7 @@ $twig = new Twig_Environment($loader, array(
   //'cache' => 'cache'
 ));
 
-$template = $twig -> load('signin.twig');
+$template = $twig -> load('login.twig');
 
 echo $template -> render( array(
       'pages' => $pages,

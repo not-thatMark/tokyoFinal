@@ -25,7 +25,7 @@ $twig = new Twig_Environment($loader, array(
   //'cache' => 'cache'
   ));
 
-$template = $twig -> load('home.twig');
+$template = $twig -> load('index.twig');
 
 echo $template -> render( array(
       'pages' => $pages,

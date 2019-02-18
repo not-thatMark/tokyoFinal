@@ -65,11 +65,6 @@
   color:#333;
 }
 
-@media (min-width:768px) {
-  .article-dual-column .text h2 {
-    font-size:20px;
-  }
-}
 
 .article-dual-column .text figure {
   text-align:center;
