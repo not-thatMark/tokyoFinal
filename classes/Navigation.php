@@ -36,9 +36,10 @@ class Navigation{
           'Cosplay'=>'food.php',
           'Music'=>'food.php',
           'Nature' =>'food.php',
-          'account' => 'useraccount.php',
+          
         );
          $this -> pages['account'] = array(
+          'account' => 'useraccount.php',
           'log out' => 'logout.php'
         );
         break;
@@ -48,9 +49,10 @@ class Navigation{
           'Cosplay'=>'food.php',
           'Music'=>'food.php',
           'Nature' =>'food.php',
-          'account' => 'useraccount.php',
-          'admin' => 'admin.php',
-       
+        );
+         $this -> pages['account'] = array(
+            'ADMIN' => 'admin.php',
+          'log out' => 'logout.php'
         );
         break;
       default:

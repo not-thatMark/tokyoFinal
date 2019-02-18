@@ -9,7 +9,8 @@
         <form method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" type="userName" name="userName" placeholder="User Name">
+            <div class="form-group">
+              <input class="form-control" type="username" name="username" placeholder="User Name" required>
             {% if response.errors.username %}
               <div class="feedback text-danger">
                 {% for err in response.errors.username %}
@@ -18,7 +19,8 @@
               </div>
             {% endif %}
             </div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password">
+            <div class="form-group">
+              <input class="form-control" type="password" name="password" placeholder="Password"required>
              {% if response.errors.email %}
               <div class="feedback text-danger">
                 {% for err in response.errors.email %}
@@ -27,7 +29,8 @@
               </div>
             {% endif %}
             </div>
-            <div class="form-group"><input class="form-control" type="password" name="verify" placeholder="Confirm password">
+            <div class="form-group">
+              <input class="form-control" type="password" name="verify" placeholder="Confirm password" required>
               {% if response.errors.password %}
               <div class="feedback text-danger">
                 {% for err in response.errors.password %}
@@ -36,9 +39,23 @@
               </div>
             {% endif %}
             </div>
-            <div class="form-group"><input class="form-control" type="userName" name="verify" placeholder="Confirm">
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" placeholder="Email"required>
+                  {% if response.errors.email %}
+              <div class="feedback text-danger">
+                {% for err in response.errors.password %}
+                  {{err}}
+                {% endfor %}
+              </div>
+            {% endif %}
              </div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot">Forgot your email or password?</a></form>
+            <div class="form-group">
+              <button class="btn btn-primary btn-block" type="submit">Sign up</button>
+            </div>
+            <a href="login.php" class="forgot">Forgot your email or password?</a>
+            </form>
     </div>
+     <script src="js/modules/validator.module.js" type="module"></script>
+    <script src="js/signUp.js" type="module"></script>
       </body>
 </html>

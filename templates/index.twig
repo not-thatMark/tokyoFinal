@@ -5,10 +5,10 @@
      <body style="background-color:rgb(0,0,0);">
       <div class="carousel slide" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active"><images class="w-100 d-block" src="images/bg.jpg" alt="Slide Image" style="width:100%;height:auto;margin:0px;"></div>
-            <div class="carousel-item"><images class="w-100 d-block" src="images/carousel-images.jpg" alt="Slide Image" style="height:auto;width:100%;"></div>
-            <div class="carousel-item"><images class="w-100 d-block" src="images/carousel-images2.jpg" alt="Slide Image" style="width:100%;height:auto;"></div>
-            <div class="carousel-item"><images class="w-100 d-block" src="images/carousel-images3.jpg" alt="Slide Image" style="width:100%;height:auto;"></div>
+            <div class="carousel-item active"><images class="w-100 d-block" src="images/carousel/bg.jpg" alt="Slide Image" style="width:100%;height:auto;margin:0px;"></div>
+            <div class="carousel-item"><images class="w-100 d-block" src="images/carousel/carousel-images.jpg" alt="Slide Image" style="height:auto;width:100%;"></div>
+            <div class="carousel-item"><images class="w-100 d-block" src="images/carousel/carousel-images2.jpg" alt="Slide Image" style="width:100%;height:auto;"></div>
+            <div class="carousel-item"><images class="w-100 d-block" src="images/carousel/carousel-images3.jpg" alt="Slide Image" style="width:100%;height:auto;"></div>
         </div>
         <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
         <ol
@@ -26,26 +26,13 @@
                 <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet.&nbsp; </p>
             </div>
             <div class="row people">
+                 {% for product in products.items %}
                 <div class="col-md-4 col-lg-3 item">
-                    <div class="box" style="background-image:url(&quot;images/season3.jpg&quot;);">
+                    <div class="box" style="background-image:url(&quot;images/carousel{{product.image_file_name}}&quot;);">
                         <div class="cover"><a href="Food.html" data-bs-hover-animate="bounce" style="font-size:56px;">Autumn</a></div>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-3 item">
-                    <div class="box" style="background-image:url(&quot;images/season3.jpg&quot;);">
-                        <div class="cover"><a href="Food.html" style="font-size:56px;">Autumn</a></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-3 item">
-                    <div class="box" style="background-image:url(&quot;images/season3.jpg&quot;);">
-                        <div class="cover"><a href="Food.html" style="font-size:56px;">Autumn</a></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-3 item">
-                    <div class="box" style="background-image:url(&quot;images/season3.jpg&quot;);">
-                        <div class="cover"><a href="Food.html" style="font-size:56px;">Autumn</a></div>
-                    </div>
-                </div>
+                  {% endfor %}
             </div>
         </div>
     </div>
@@ -56,15 +43,15 @@
                 <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
             </div>
             <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><images class="images-thumbnail images-fluid" src="images/reataurant3.jpg" id="circle-image">
+                <div class="col-sm-6 col-md-4 item"><images class="images-thumbnail images-fluid" src="images/food/reataurant3.jpg" id="circle-image">
                     <h3 class="name">Article Title</h3>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="Food.html" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
                 <div
-                    class="col-sm-6 col-md-4 item"><images class="images-thumbnail images-fluid" src="images/restaurant.jpg" id="circle-image">
+                    class="col-sm-6 col-md-4 item"><images class="images-thumbnail images-fluid" src="images/food/restaurant.jpg" id="circle-image">
                     <h3 class="name">Article Title</h3>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="Food.html" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
             <div
-                class="col-sm-6 col-md-4 item"><images class="images-thumbnail images-fluid" src="images/restaurant2.jpg" id="circle-image">
+                class="col-sm-6 col-md-4 item"><images class="images-thumbnail images-fluid" src="images/food/restaurant2.jpg" id="circle-image">
                 <h3 class="name">Article Title</h3>
                 <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="Food.html" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
     </div>

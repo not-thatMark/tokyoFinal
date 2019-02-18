@@ -28,11 +28,9 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 include('includes/navigation.inc.php');
 
 $loader = new Twig_Loader_Filesystem('templates');
-$twig = new Twig_Environment($loader, array(
-  //'cache' => 'cache'
-));
+$twig = new Twig_Environment($loader, array( ));
 
-$template = $twig -> load('login.twig');
+$template = $twig -> load('sigin.twig');
 
 echo $template -> render( array(
       'pages' => $pages,

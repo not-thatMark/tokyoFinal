@@ -55,8 +55,8 @@ let validation = { username: false, email: false, password: false };
 
 $(document).ready( () => {
   //disable the submit button
-  $('button[type="submit"]').attr('disabled', true );
-  watchValidation();
+  $('button[type="submit"]').attr('disabled', true)
+   watchValidation();
   $('#sign-up').on('input',( event ) => {
     let targetName = $(event.target).attr('name');
     switch(targetName){
@@ -96,8 +96,10 @@ $(document).ready( () => {
       default:
         break;
     }
+   
+    
   });
-  
+
 });
 
 function watchValidation(){
